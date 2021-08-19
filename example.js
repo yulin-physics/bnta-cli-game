@@ -44,7 +44,7 @@ function startGame() {
 
   function logStep() {
     const step = steps[currentStep];
-
+   
     if (step) {
       readline.question(`${step.message || ""} `, (input) => {
         handleAnswer(input);
@@ -80,6 +80,7 @@ function startGame() {
     const value = parseInt(num);
     return !isNaN(value);
   }
+  
 
   console.clear();
   logStep();
