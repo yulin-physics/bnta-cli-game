@@ -8,7 +8,7 @@ function stickOrTwist(){
     // console.log("Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!");
 
     // console.log(`Your starting score is ${usersGame.getScore()}. Lets see what you got!`);
-    console.log(chalk.blue("Do you want to stick or twist? "));
+    console.log("Do you want to stick or twist? ");
     let answer = prompt(" > ");
         if(answer === 'twist'){
             usersGame.twist(); 
