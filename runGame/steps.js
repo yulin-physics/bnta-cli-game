@@ -14,7 +14,7 @@ class Step{
     }
 
     no(){
-        console.log("Bye then!");
+        console.log(this.n);
     }
     
 }
