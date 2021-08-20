@@ -1,13 +1,16 @@
 const prompt = require('prompt-sync')();
-
+let BlackJackGame = require('./blackjack-game.js');
+let BlackJack = require('./blackjack.js')
 class InitStep {
     constructor(step) {
         this.step = step;
         this.answer = null;
     }
 
+
     logStep() {
-      let answer = prompt(`${this.step.message()}`);
+      console.log(this.step.message());
+      let answer = prompt("> ");
       this.answer = answer;
     }
 
@@ -15,6 +18,13 @@ class InitStep {
     
         if (this.answer === "yes") {
           this.step = this.step.yes();
+          let usersGame = new BlackJack();
+          console.log("Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!");
+
+          console.log(`Your starting score is ${usersGame.getScore()}. Lets see what you got!`);
+
+          BlackJackGame.stickOrTwist();
+
         } else {
           this.step = this.step.no();
         }
