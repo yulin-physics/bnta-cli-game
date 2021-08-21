@@ -22,7 +22,24 @@ function stickOrTwist(){
             console.log(chalk.bgRed.bold('\n The villain will now try and beat your score!'));
 
             //Press Enter to contiune.
-        console.log(`\n Press ENTER to contiune`);
+            let gameContinue = prompt(`\n                                                                                                             
+            ██████████████████████████                                                        
+              ██    ██  ██  ██    ██                                
+              ██      ██  ██      ██                                
+              ████      ██      ████                                
+                ████          ████                                  
+                  ████  ██  ████                                    
+                    ████  ████  
+     Press ENTER to reveal the villain's score!                                  
+                    ████  ████                                      
+                  ████      ████                                    
+                ████    ██    ████                                  
+                     ░░░░████               
+              ██        ██        ██                             
+              ██      ██  ██      ██                                
+              ██    ██  ██  ██    ██                                
+              ██  ██  ██  ██  ██  ██                                
+            ██████████████████████████`);
 
             let dealersGame = new BlackJack();
             console.log(chalk.bgWhite.bold.red(`\n Villain's inital score is ${dealersGame.getScore()}`));
@@ -30,6 +47,26 @@ function stickOrTwist(){
                 dealersGame.twist()
                 console.log(chalk.bgBlack.red.bold(`\n Villain's new score is ${dealersGame.getScore()}`));
             } //Click enter to view who has won?!
+
+            let finalScore = prompt(`\n 
+          ██████████████████████████                                                        
+            ██    ██  ██  ██    ██                                
+            ██      ██  ██      ██                                
+            ████      ██      ████                                
+              ████          ████                                  
+                ████  ██  ████                                    
+                  ████  ████  
+      Press ENTER to reveal your fate!                                   
+                  ████  ████                                      
+                ████      ████                                    
+              ████    ██    ████                                  
+                   ░░░░████               
+            ██        ██        ██                             
+            ██      ██  ██      ██                                
+            ██    ██  ██  ██    ██                                
+            ██  ██  ██  ██  ██  ██                                
+          ██████████████████████████`);
+
             if(!dealersGame.isBust()){
                 console.log(chalk.yellow(`\n SORRY, THE VILLAIN BEAT YOU :( TRY AGAIN TO LET YOURSELF FREE!`));
             } else {
