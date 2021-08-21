@@ -6,9 +6,11 @@ let usersGame = new BlackJack();
 function blackjackIntro() {
   console.log(`\n loading... \n`);
         
-  setTimeout( ()=>{console.log(chalk.bgBlack.redBright(`\n Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!`));}, 2000)  
+  setTimeout( ()=>{console.log(chalk.redBright(`\n Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!`));}, 2000)  
 
-  setTimeout( ()=>{ console.log(chalk.underline.magentaBright.bold(`\n Your starting score is ${usersGame.getScore()}. Let\'s see what you got! \n`));}, 4000)
+  setTimeout( ()=>{console.log(chalk.redBright(`\n Beat the villain by getting a count as close to 21 as possible, without going over 21.`));}, 4000)  
+
+  setTimeout( ()=>{ console.log(chalk.underline.magentaBright.bold(`\n Your starting score is ${usersGame.getScore()}. Let\'s see what you got! \n`));}, 6000)
  
 }
 
