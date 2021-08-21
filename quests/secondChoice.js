@@ -22,7 +22,7 @@ ifSecondChoice(user){
                 console.log("\nDamn! aren't you just a psychopath? Oh well you do you...")
                 console.log('Anyway, you keep walking and go deeper in the forest...')
             }else{
-            console.log('What? you are not even capable to type yes or no... ')
+            console.log('What? you are not even capable to say yes or no... ')
             console.log('you should not attempt helping another creature: you would surely kill it!')
             console.log('\nso I choose for you to keep going deeper in the forest...')
         }

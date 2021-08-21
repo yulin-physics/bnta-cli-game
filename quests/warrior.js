@@ -38,10 +38,11 @@ class Warrior{
     removeLife(){
         this.lives=this.lives-1;
         console.log('YOU HAVE LOST A LIFE!')
+        this.youDie()
     }
     addLife(){
         this.lives=this.lives+1;
-        console.log('You feel stronger than before!One life was added!')    
+        console.log('You feel stronger than before! One life was added!')    
     } 
     youDie(){
         if (this.lives=0){

@@ -20,13 +20,14 @@ let choice2=0;
         let takeName=prompt('What is your name? ')  
         
         user.assignName(takeName);
-        console.log(`So, ${user.name}, you are telling me that your capricious master ordered you to find the legendary dark amulet...  `)
-        console.log('Well, you will need first to go through this forest, but be careful, as you could encounter monsters...GOOD LUCK')
+        console.log(`\nSo, ${user.name}, you are telling me that your capricious master ordered you to find the legendary dark amulet...  `)
+        console.log('\nWell, you will need first to go through this forest, but be careful, as you could encounter monsters...GOOD LUCK')
     }
        
     saveName();    
 // HERE THE USER IS ASKED THE FIRST CHOICE, TAKE BERRIES OR NOT, CONSEQUENCES: EITHER ADD/REMOVE A LIFE OR NOTHING
     let choiceBerries= new FirstChoice(user);
+// HERE SECOND CHOICE: HELP INJURED FOX OR NOT, IF YES, MONSTER, OTHERWISE CONTINUE    
     let secondChoice=new SecondChoice(user);
     
 };

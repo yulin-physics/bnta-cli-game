@@ -20,7 +20,7 @@ class Monster{
          console.log('In complete disbelief you realise you have killed a monster all by yourself!')
          console.log('You now need to keep walking, just in case the monster had friends...')
      }else if((mHealth-damage)>mHealth/2){
-         console.log('Damage inflicted but the monster is still pretty much alive!')
+         console.log('You inflicted damage but the monster is still pretty much alive!')
          //add choice to attack or run
      }else{
          console.log('The monster laughs at you! UH-OH!')

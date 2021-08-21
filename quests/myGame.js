@@ -27,7 +27,7 @@ let user=new Warrior();
                 console.log('That was a good choice!')
                 user.addLife()
                 console.log(`You now have ${user.currentLives()}`)
-                //need to find pass equivalent or?
+               
             }else{
                 console.log('Oh no...those berries were poisonous! You feel sick....')
                 user.removeLife()
@@ -39,34 +39,24 @@ let user=new Warrior();
         }
     }
 
-//to see if class warrior work
-    function trying(){
+//to see if class warrior works
+    // function trying(){
         
-        let attacking=prompt('Want to attack monster? ')
-        if (attacking=='yes'){
-            user.attack()
-        }else{console.log('What a coward!!!!')}
-        user.currentStrength()
-        user.addStrength(30)
-        user.addStrength(30)
-        user.currentStrength()
-    }
+    //     let attacking=prompt('Want to attack monster? ')
+    //     if (attacking=='yes'){
+    //         user.attack()
+    //     }else{console.log('What a coward!!!!')}
+    //     user.currentStrength()
+    //     user.addStrength(30)
+    //     user.addStrength(30)
+    //     user.currentStrength()
+    // }
 saveName();    
  //setTimeout(()=>{introduction()},10000) ;
 firstChoice();
  //trying();
 };
 
-// function handleAnswer(answer){
-//     let user=new Warrior();
-//     if (answer=='run'){
-//         console.log('YOU COWARD!!!!')
-//         readline.close()}
-//     else if(answer=='attack'){
-//         console.log(`You inflicted damage ${user.attack()} `)
-//         readline.close()
-//     }
-// }
 
 
 
