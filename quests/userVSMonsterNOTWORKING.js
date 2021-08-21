@@ -45,9 +45,7 @@ class UserVsMonster{
                         }else if(stillWantToFightOrNot=='run'|| stillWantToFightOrNot=='r'){
                             console.log("The monster got distracted and you took the chance to run!")
                             break
-                        }else{console.log("The monster pitied your stutter and let you go!")
-                        break}
-                        
+                        }
                         
                         
                     }

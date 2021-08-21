@@ -38,14 +38,14 @@ class Warrior{
     removeLife(){
         this.lives=this.lives-1;
         console.log('YOU HAVE LOST A LIFE!')
-        this.youDie()
+        this.youDie(this.lives)
     }
     addLife(){
         this.lives=this.lives+1;
         console.log('You feel stronger than before! One life was added!')    
     } 
-    youDie(){
-        if (this.lives=0){
+    youDie(lives){
+        if (lives=0){
             console.log('YOU ARE DEAD, bye bye')
             //execute a fucntion that stops the game and brings you back to 'wanna play again?'
         }
