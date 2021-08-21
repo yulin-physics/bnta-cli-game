@@ -1,7 +1,6 @@
 const prompt = require('prompt-sync')();
 const chalk = require('chalk');
 let BlackJackGame = require('./blackjack-game.js');
-const chalk = require('chalk');
 let BlackJack = require('./blackjack.js')
 class InitStep {
     constructor(step) {
@@ -47,13 +46,8 @@ class InitStep {
       }
 
       runBlackjack() {
-        let usersGame = new BlackJack();
-        console.log(`\n loading... \n`);
-        
-        setTimeout( ()=>{console.log(chalk.bgBlack.redBright(`\n Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!`));}, 2000)  
-  
-        setTimeout( ()=>{ console.log(chalk.green.underline.bold(`\n Your starting score is ${usersGame.getScore()}. Let\'s see what you got! \n`));}, 4000)
-       
+      
+        BlackJackGame.blackjackIntro();
   
         setTimeout(() => {BlackJackGame.stickOrTwist()}, 6000);
       }

@@ -3,6 +3,14 @@ const chalk = require('chalk');
 let BlackJack = require('./blackjack.js');
 let usersGame = new BlackJack();
 
+function blackjackIntro() {
+  console.log(`\n loading... \n`);
+        
+  setTimeout( ()=>{console.log(chalk.bgBlack.redBright(`\n Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!`));}, 2000)  
+
+  setTimeout( ()=>{ console.log(chalk.underline.magentaBright.bold(`\n Your starting score is ${usersGame.getScore()}. Let\'s see what you got! \n`));}, 4000)
+ 
+}
 
 function stickOrTwist(){
 
@@ -24,7 +32,7 @@ function stickOrTwist(){
             console.log(chalk.bgRed.bold('\n The villain will now try and beat your score!'));
 
             //Press Enter to contiune.
-            let gameContinue = prompt(`\n                                                                                                             
+            console.log(`\n                                                                                                             
             ██████████████████████████                                                        
               ██    ██  ██  ██    ██                                
               ██      ██  ██      ██                                
@@ -42,35 +50,37 @@ function stickOrTwist(){
               ██    ██  ██  ██    ██                                
               ██  ██  ██  ██  ██  ██                                
             ██████████████████████████`);
+            let gameContinue = prompt();
 
             let dealersGame = new BlackJack();
             console.log(chalk.bgWhite.bold.red(`\n Villain's inital score is ${dealersGame.getScore()}`));
             while(dealersGame.getScore() < usersGame.getScore() && !dealersGame.isBust()){
                 dealersGame.twist()
-                console.log(chalk.bgBlack.red.bold(`\n Villain's new score is ${dealersGame.getScore()}`));
+                console.log(chalk.bgWhite.red.bold(`\n Villain's new score is ${dealersGame.getScore()}`));
             } //Click enter to view who has won?!
 
-            let finalScore = prompt(`\n 
-          ██████████████████████████                                                        
-            ██    ██  ██  ██    ██                                
-            ██      ██  ██      ██                                
-            ████      ██      ████                                
-              ████          ████                                  
-                ████  ██  ████                                    
-                  ████  ████  
-      Press ENTER to reveal your fate!                                   
-                  ████  ████                                      
-                ████      ████                                    
-              ████    ██    ████                                  
-                   ░░░░████               
-            ██        ██        ██                             
-            ██      ██  ██      ██                                
-            ██    ██  ██  ██    ██                                
-            ██  ██  ██  ██  ██  ██                                
-          ██████████████████████████`);
+            console.log(`\n 
+            ██████████████████████████                                                        
+              ██    ██  ██  ██    ██                                
+              ██      ██  ██      ██                                
+              ████      ██      ████                                
+                ████          ████                                  
+                  ████  ██  ████                                    
+                    ████  ████  
+        Press ENTER to reveal your fate!                                   
+                    ████  ████                                      
+                  ████      ████                                    
+                ████    ██    ████                                  
+                     ░░░░████               
+              ██        ██        ██                             
+              ██      ██  ██      ██                                
+              ██    ██  ██  ██    ██                                
+              ██  ██  ██  ██  ██  ██                                
+            ██████████████████████████`);
+            let finalScore = prompt();
 
             if(!dealersGame.isBust()){
-                console.log(chalk.yellow(`\n SORRY, THE VILLAIN BEAT YOU :( TRY AGAIN TO LET YOURSELF FREE!`));
+                console.log(chalk.bgRed(`\n SORRY, THE VILLAIN BEAT YOU :( TRY AGAIN TO LET YOURSELF FREE!`));
             } else {
                 console.log(chalk.green.bold(`\n YAAYY, YOU'VE WON SECURING YOURSELF MAX PROTECTION AND FREEDOM FROM ALL EVILS!`));
             }
@@ -80,4 +90,4 @@ function stickOrTwist(){
 
 //stickOrTwist();
 
-module.exports = {stickOrTwist};
+module.exports = {stickOrTwist, blackjackIntro};
