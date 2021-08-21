@@ -16,6 +16,7 @@ let choice2=0;
     let user=new Warrior();
 
     function saveName(){
+        console.log('\n')
         let takeName=prompt('What is your name? ')  
         
         user.assignName(takeName);

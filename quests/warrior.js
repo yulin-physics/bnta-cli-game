@@ -15,7 +15,7 @@ class Warrior{
     }
     attack(){
         let damageInflicted=Math.floor(Math.random()*100 + 1);
-        console.log(`You attacked the monster and removed ${damageInflicted} health points from it.`)
+        console.log(`You inflicted ${damageInflicted} damage on the monster.`)
         return damageInflicted;
     }
     // NEEDS TO CHECK IF IT WORKS
@@ -37,7 +37,7 @@ class Warrior{
         }
     removeLife(){
         this.lives=this.lives-1;
-        console.log('Oh NO! YOU LOST A LIFE!')
+        console.log('YOU HAVE LOST A LIFE!')
     }
     addLife(){
         this.lives=this.lives+1;
