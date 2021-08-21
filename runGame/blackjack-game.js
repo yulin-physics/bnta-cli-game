@@ -5,7 +5,9 @@ let usersGame = new BlackJack();
 
 
 function stickOrTwist(){
+
     console.log(chalk.blue.bold("Do you want to STICK or TWIST? "));
+
     let answer = prompt(" > ");
         if(answer === 'twist'){
             usersGame.twist(); 

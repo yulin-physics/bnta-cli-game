@@ -3,14 +3,12 @@ const prompt = require('prompt-sync')();
 const Step = require('./steps.js');
 const InitStep = require("./initSteps.js")
 
-
-messages = ["Are you ready for an adventure? (yes/no)"]
-yesSteps = ["Choose your character!"]
-noSteps = ["Okay, bye then!"]
+let introText = fs.readFileSync('introduction.txt', 'utf8')
 
 function startGame() {
   //current step
-  let currentStep = new Step(messages[0], yesSteps[0], noSteps[0]);
+  console.log(introText);
+  let currentStep = new Step();
 
   let initStep = new InitStep(currentStep);
  

@@ -1,4 +1,5 @@
 const prompt = require('prompt-sync')();
+const chalk = require('chalk');
 let BlackJackGame = require('./blackjack-game.js');
 const chalk = require('chalk');
 let BlackJack = require('./blackjack.js')
@@ -10,7 +11,7 @@ class InitStep {
 
 
     logStep() {
-      console.log(this.step.message());
+      console.log(chalk.bgBlue.bold(this.step.message()));
       let answer = prompt(" > ");
       this.answer = answer;
     }
@@ -20,12 +21,23 @@ class InitStep {
         if (this.answer === "yes") {
           this.step = this.step.yes();
 
-          let usersGame = new BlackJack();
-          console.log(chalk.bgBlack.redBright(`\n Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!`));
+          console.log(chalk.blue.bold(this.step));
+          this.answer = prompt(" > ");
+          this.answer = this.answer.toLowerCase();
+          
+          switch (this.answer.toLowerCase()) {
+            case "left":
+              this.runBlackjack();
+              break;
+            case "l":
+              this.runBlackjack();
+              break;
 
-          console.log(chalk.green.underline.bold(`\n Your starting score is ${usersGame.getScore()}. \n LETS SEE WHAT YOU GOT! \n`));
+            default :
+            console.log("Bianca and Maria\'s warriorrrr");
+            break;
+          }
 
-          BlackJackGame.stickOrTwist();
 
         } else {
           this.step = this.step.no();
@@ -34,6 +46,18 @@ class InitStep {
         return this.step;
       }
 
+      runBlackjack() {
+        let usersGame = new BlackJack();
+        console.log(`\n loading... \n`);
+        
+        setTimeout( ()=>{console.log(chalk.bgBlack.redBright(`\n Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!`));}, 2000)  
+  
+        setTimeout( ()=>{ console.log(chalk.green.underline.bold(`\n Your starting score is ${usersGame.getScore()}. Let\'s see what you got! \n`));}, 4000)
+       
+  
+        setTimeout(() => {BlackJackGame.stickOrTwist()}, 6000);
+      }
+  
 
 }
 
