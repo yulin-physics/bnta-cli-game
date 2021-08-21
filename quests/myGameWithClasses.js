@@ -20,9 +20,9 @@ let user=new Warrior();
     }
        
 saveName();    
-
+// HERE THE USER IS ASKED THE FIRST CHOICE, TAKE BERRIES OR NOT, CONSEQUENCES: EITHER ADD/REMOVE A LIFE OR NOTHING
 let choiceBerries= new FirstChoice(user);
-
+// HERE WANT TO ADD THE CHOICE THAT LEADS TO THE GAME FATMA AND YULIN WROTE
  
 };
 
