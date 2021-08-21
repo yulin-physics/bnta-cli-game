@@ -7,9 +7,11 @@ class Warrior{
     }
     name(){return this.name}
 
+    currentLives(){return this.lives}
+
     assignName(userName){
         this.name=userName;
-        console.log(`${userName} is a strange name, but ok`)
+        console.log(`${userName} is a strange name, but we can work with that....`)
     }
     attack(){
         let damageInflicted=Math.floor(Math.random()*100 + 1);
@@ -33,9 +35,13 @@ class Warrior{
             this.removeLives();
         }
         }
-    removeLives(){
+    removeLife(){
         this.lives=this.lives-1;
         console.log('Oh NO! YOU LOST A LIFE!')
+    }
+    addLife(){
+        this.lives=this.lives+1;
+        console.log('You feel stronger than before!One life was added!')    
     } 
     youDie(){
         if (this.lives=0){
