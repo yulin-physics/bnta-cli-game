@@ -19,6 +19,7 @@ function startGame() {
 
 }
 
+module.exports={}
 
 startGame();
 // const name = prompt('What is your name?');

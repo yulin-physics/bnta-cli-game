@@ -14,12 +14,12 @@ ifFirstChoice(user){
             if ((Math.random()*100+1)>20){
                 console.log('That was a good choice!')
                 user.addLife()
-                console.log(`You now have ${user.currentLives()}`)
+                console.log(`You now have ${user.currentLives()} lives!`)
                 //need to find pass equivalent or?
             }else{
                 console.log('Oh no...those berries were poisonous! You feel sick....')
                 user.removeLife()
-                console.log(`You now have ${user.currentLives()}`)
+                console.log(`You now have ${user.currentLives()} lives.`)
             }
         }else{
             console.log('After inspection you convince yourself that those berries are poisonous... ')
