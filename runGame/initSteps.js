@@ -1,7 +1,6 @@
 const prompt = require('prompt-sync')();
 const chalk = require('chalk');
 let BlackJackGame = require('./blackjack-game.js');
-let BlackJack = require('./blackjack.js')
 class InitStep {
     constructor(step) {
         this.step = step;

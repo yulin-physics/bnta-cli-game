@@ -14,10 +14,10 @@ function blackjackIntro() {
 
 function stickOrTwist(){
 
-    console.log(chalk.blue.bold("Do you want to STICK or TWIST? "));
+    console.log(chalk.blue.bold("Do you want to STICK or TWIST? (S/T)"));
 
     let answer = prompt(" > ");
-        if(answer === 'twist'){
+        if(answer.toLowerCase() === 'twist' || answer.toLowerCase() === 't'){
             usersGame.twist(); 
             if(usersGame.isBust()){
                 console.log(chalk.bgRed.bold(`\n Your final score is ${usersGame.getScore()}` + `\n Sorry, you've lost. You will stay prisoner forever!`));
