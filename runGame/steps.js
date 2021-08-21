@@ -18,7 +18,7 @@ class Step{
     }
 
     no(){
-        console.log(chalk.red.bold(`\n Okay, bye then! \n`))
+        console.log(chalk.bgBlue.bold(`\n Okay, bye then! \n`))
     }
     
 }

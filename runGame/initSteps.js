@@ -10,7 +10,7 @@ class InitStep {
 
 
     logStep() {
-      console.log(chalk.red.bold(this.step.message()));
+      console.log(chalk.bgBlue.bold(this.step.message()));
       let answer = prompt(" > ");
       this.answer = answer;
     }
@@ -19,7 +19,7 @@ class InitStep {
     
         if (this.answer === "yes") {
           this.step = this.step.yes();
-          console.log(this.step);
+          console.log(chalk.blue.bold(this.step));
           this.answer = prompt(" > ");
           this.answer = this.answer.toLowerCase();
           
