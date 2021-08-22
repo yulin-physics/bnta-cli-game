@@ -16,7 +16,6 @@ class FinalQuest{
             console.log(`You cut the monster's throat and kill it! YOU GET THE AMULET! `)
             console.log('\n* A DAY LATER *')
             console.log('You did it!!! You managed to bring the amulet to you master, who is so happy that makes you rich!')
-            console.log('THE END')
 
         }else{
             console.log('If only you had a proper weapon....The only way to get the amulet is to quietly approach the monster and steal it! ')
@@ -25,12 +24,13 @@ class FinalQuest{
                 console.log('You steal the amulet without waking the monster up. NOW RUN BACK TO YOUR MASTER BEFORE THE MONSTER WAKES UP!')
                 console.log('\n* A DAY LATER *')
                 console.log('You did it!!! You managed to bring the amulet to you master, who is so happy that makes you rich!')
-                console.log('THE END')
+              
             }else{
                 console.log('You try hard not to make a sound but then a bird starts singing, waking the monster up. The monster sees you and immediately attacks you!')
                 user.youDie()
             }
-        }    
+        }  
+        console.log('THE END')  
     }
 }
 module.exports=FinalQuest;

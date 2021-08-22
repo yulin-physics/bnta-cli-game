@@ -6,7 +6,7 @@ const InitStep = require("./initSteps.js")
 let introText = fs.readFileSync('introduction.txt', 'utf8')
 
 function startGame() {
-  //current step
+
   console.log(introText);
   let currentStep = new Step();
 

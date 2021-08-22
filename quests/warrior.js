@@ -44,9 +44,6 @@ class Warrior{
     } 
     youDie(){
         console.log('YOU DIED')
-        process.exit()
-        // this.die++
-        // return this.die
         }
     }   
     
