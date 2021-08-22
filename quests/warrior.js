@@ -20,13 +20,14 @@ class Warrior{
     }
     // NEEDS TO CHECK IF IT WORKS
     currentStrength(){
-        console.log(`You currently have ${this.weapon} weapons`)
-        //return this.strength
+       // console.log(`You currently have ${this.weapon} weapons`)
+        return this.weapon
     }
-    addStrength(points){
-        this.weapon=this.weapon+points
+    addStrength(){
+        //this.weapon=this.weapon+points
+        this.weapon=this.weapon+1;
         console.log(`WHAT A SHARP WEAPON!`)
-        //return this.strength
+        return this.weapon
     }
     // removeStrength(points){
     //     let newStrength=this.strength=this.strength-points
