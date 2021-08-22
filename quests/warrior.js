@@ -1,8 +1,8 @@
-// inherits from Character class
+
 class Warrior{
     constructor(name){
         this.name=name;
-        this.strength=0;
+        this.weapon=0;
         this.lives=0;
     }
     name(){return this.name}
@@ -20,21 +20,21 @@ class Warrior{
     }
     // NEEDS TO CHECK IF IT WORKS
     currentStrength(){
-        console.log(`Your current strenght is: ${this.strength}`)
+        console.log(`You currently have ${this.weapon} weapons`)
         //return this.strength
     }
     addStrength(points){
-        this.strength=this.strength+points
-        console.log(`Experience point added: ${points}, your strength now is ${this.strength}`)
+        this.weapon=this.weapon+points
+        console.log(`WHAT A SHARP WEAPON!`)
         //return this.strength
     }
-    removeStrength(points){
-        let newStrength=this.strength=this.strength-points
-        console.log(`experience point removed: ${points}, your strength now is ${newStrength}`)
-        if (newStrength<0){
-            this.removeLives();
-        }
-        }
+    // removeStrength(points){
+    //     let newStrength=this.strength=this.strength-points
+    //     console.log(`experience point removed: ${points}, your strength now is ${newStrength}`)
+    //     if (newStrength<0){
+    //         this.removeLives();
+    //     }
+    //     }
     removeLife(){
         this.lives=this.lives-1;
         return this.lives

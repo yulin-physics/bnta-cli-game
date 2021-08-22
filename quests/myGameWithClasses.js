@@ -3,6 +3,7 @@ const prompt = require("prompt-sync")();
 const Warrior=require('./warrior');
 const FirstChoice=require('./firstChoice.js');
 const SecondChoice = require("./secondChoice");
+const ThirdChoice = require("./thirdChoice");
 
 
 
@@ -23,10 +24,12 @@ function startAdventure(){
        
     saveName();    
 // HERE THE USER IS ASKED THE FIRST CHOICE, TAKE BERRIES OR NOT, CONSEQUENCES: EITHER ADD/REMOVE A LIFE OR NOTHING
-    let choiceBerries= new FirstChoice(user);
+    let firstChoice= new FirstChoice(user);
 // HERE SECOND CHOICE: HELP INJURED FOX OR NOT, IF YES, MONSTER, OTHERWISE CONTINUE    
     let secondChoice=new SecondChoice(user);
-    console.log('YOU STILL ALIVE!')
+    console.log('MOVE TO 3RD CHOICE')
+// THIRD CHOICE: VILLAGE OR NOT? IF GO TO VILLAGE THEN can play MINIGAME OF CARDS, OTHERWISE CONTINUE. IF WIN CARD GAME YOU GET LIFE POINT OTHERWISE PASS.    
+    let thirdChoice=new ThirdChoice();
 };
 
 startAdventure()

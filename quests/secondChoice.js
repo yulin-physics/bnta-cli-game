@@ -14,7 +14,7 @@ ifSecondChoice(user){
         if (choice2=='yes'||choice2=='y'){
             // fox is a monster and attacks!!!
             console.log(`You are so naive... that was a trap!!! The fox quickly transforms into a not so good looking monster!!!`)
-        if(user.currentLives()>=0){let fight=new UserVsMonster(user)}else{console.log('\n You are feeling so sick for the poisonous that cannot stop vomiting, the monster is disgusted and leaves you be.')}   
+        if(user.currentLives()>=0){let fight=new UserVsMonster(user)}else{console.log('\n You are feeling so sick that cannot stop vomiting, the monster is disgusted and leaves you be.')}   
         // put class for encounter with monster
         
         

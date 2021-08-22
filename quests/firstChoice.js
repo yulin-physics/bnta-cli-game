@@ -11,15 +11,15 @@ ifFirstChoice(user){
         console.log('\nDo you take them or not? (y/n)')
         let choice1=prompt('> ').toLowerCase()
         if (choice1=='yes'||choice1=='y'){
-            if ((Math.random()*100+1)>90){
+            if ((Math.random()*100+1)>50){
                 console.log('\nThat was a good choice!')
                 user.addLife()
-                console.log(`You now have ${user.currentLives()} lives!`)
+                //console.log(`You now have ${user.currentLives()} lives!`)
                 //need to find pass equivalent or?
             }else{
                 console.log('\nOh no...those berries were poisonous! You feel sick....')
                 user.removeLife()
-                console.log(`You now have ${user.currentLives()} lives.`)
+                //console.log(`You now have ${user.currentLives()} lives.`)
             }
         }else{
             console.log('\nAfter inspection you convince yourself that those berries are poisonous... ')
