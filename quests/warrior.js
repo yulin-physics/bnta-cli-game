@@ -12,7 +12,7 @@ class Warrior{
 
     assignName(userName){
         this.name=userName;
-        console.log(`${userName} is a strange name, but we can work with that....`)
+        console.log(`${userName}... what a strange name, but we can work with that....`)
     }
     attack(){
         let damageInflicted=Math.floor(Math.random()*100 + 1);
@@ -27,7 +27,7 @@ class Warrior{
     addStrength(){
         //this.weapon=this.weapon+points
         this.weapon++;
-        console.log(`WHAT A SHARP WEAPON!, you have now ${this.weapon} swords`)
+        //console.log(`WHAT A SHARP WEAPON!, you have now ${this.weapon} swords`)
         return this.weapon
     }
     
@@ -45,8 +45,8 @@ class Warrior{
     youDie(){
         console.log('YOU DIED')
         process.exit()
-        // this.die++
-        // return this.die
+        //this.die++
+         //return this.die
         }
     }   
     

@@ -1,6 +1,6 @@
     const Warrior = require("./warrior");
     const prompt = require("prompt-sync")();
-    const StartGame=require("./index")
+    const StartGame=require("./miniGame")
 
     class ThirdChoice{
         constructor(user){
@@ -21,15 +21,21 @@
                 let cardGame=prompt('>').toLowerCase()
                 if (cardGame=='yes'||cardGame=='y'){
                     
-                    console.log(`\n'Finally! Someone to play with!' He says!`);
-    //need to add CLASS MINI GAME
+                    console.log(`\n'Finally! Someone to play with!' He says!\n`);
+    //CLASS MINI GAME
+            console.log('\nDo you know how to play BlackJack? I will be the dealer! You start first with a score of 0 ')
+            console.log('you will need to twist the first card, but after you can choose if to twist again or stay with the current score.')
+            console.log('Your goal is to reach a score that is high enough to beat my score without busting after reaching a score larger than 21.')
+            console.log('When you choose to stick, I will start twisting cards, until I either reach a score of 17 or I bust myself.')
+            console.log('Wins who does not bust and has the highest score! But enough talking, LET US PLAY!\n')
+
                     let startG=new StartGame();
-                    
-                    console.log('You have a lot of fun and make a new friend...');
+
+                    console.log('\nYou had a lot of fun and made a new friend...');
                     console.log(`\n'Thank you for playing with me! I have been feeling lonely lately! Actually... I want to thank you with a gift...`);
                     console.log('\nYOU RECEIVED A SWORD!');
                     user.addStrength();
-                    console.log(user.currentStrength())
+                   // console.log(user.currentStrength())
                 }else if(cardGame=='no'||cardGame=='n'){
                     console.log(`\n"Oh well, hopefully I will find someone else to play with! have a good evening!" He says, while leaving your table.`)
                 }else{
@@ -46,3 +52,4 @@
     }
 
     module.exports=ThirdChoice
+    

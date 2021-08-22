@@ -13,11 +13,11 @@ class StartGame{
 
 startGame() {
   //current step
-  let messages = ["Are you ready for an adventure? (yes/no)"]
-  let yesSteps = ["Choose your character!"]
+  let messages = ["So... want to start another round? (yes/no)"]
+  //let yesSteps = ["Choose your character!"]
   let noSteps = ["Okay, bye then!"]
 
-  let currentStep = new Step(messages[0], yesSteps[0], noSteps[0]);
+  let currentStep = new Step(messages[0], noSteps[0]);
 
   let initStep = new InitStep(currentStep);
  
