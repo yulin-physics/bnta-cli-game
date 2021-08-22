@@ -3,13 +3,20 @@ const prompt = require('prompt-sync')();
 const Step = require('./steps.js');
 const InitStep = require("./initSteps.js")
 
+class StartGame{
+  constructor(){
+    this.startGame();
+    //this.message=message;
+    
+  }
 
-messages = ["Are you ready for an adventure? (yes/no)"]
-yesSteps = ["Choose your character!"]
-noSteps = ["Okay, bye then!"]
 
-function startGame() {
+startGame() {
   //current step
+  let messages = ["Are you ready for an adventure? (yes/no)"]
+  let yesSteps = ["Choose your character!"]
+  let noSteps = ["Okay, bye then!"]
+
   let currentStep = new Step(messages[0], yesSteps[0], noSteps[0]);
 
   let initStep = new InitStep(currentStep);
@@ -17,10 +24,13 @@ function startGame() {
   initStep.logStep();
   initStep.handleAnswer();
 
+  //this.startGame();
+
 }
 
-module.exports={}
 
-startGame();
+
 // const name = prompt('What is your name?');
 // console.log(`Hey there ${name}`);
+}
+module.exports=StartGame;
