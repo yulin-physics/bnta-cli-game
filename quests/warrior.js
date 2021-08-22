@@ -4,6 +4,7 @@ class Warrior{
         this.name=name;
         this.weapon=0;
         this.lives=0;
+        //this.die=0;
     }
     name(){return this.name}
 
@@ -44,6 +45,8 @@ class Warrior{
     youDie(){
         console.log('YOU DIED')
         process.exit()
+        // this.die++
+        // return this.die
         }
     }   
     

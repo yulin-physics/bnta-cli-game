@@ -1,13 +1,8 @@
 
-const Weapon=require("./weapon")
-
 const prompt = require("prompt-sync")();
 
 class FinalQuest{
     constructor(user){
-        
-        this.sword=new Weapon();
-        
         this.finalQuest(user)
     }
     finalQuest(user){
