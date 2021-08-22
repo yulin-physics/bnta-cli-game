@@ -5,7 +5,7 @@ const FirstChoice=require("./firstChoice.js");
 const SecondChoice = require("./secondChoice");
 const ThirdChoice = require("./thirdChoice");
 const FinalQuest=require("./finalQuest");
-const Weapon = require("./weapon");
+
 
 
 
@@ -13,7 +13,7 @@ const Weapon = require("./weapon");
 function startAdventure(){
 
     let user=new Warrior();
-    let sword=new Weapon();
+  
 
     function saveName(){
         console.log('\n')
@@ -33,14 +33,21 @@ function startAdventure(){
 // THIRD CHOICE: VILLAGE OR NOT? IF GO TO VILLAGE THEN can play MINIGAME OF CARDS, OTHERWISE CONTINUE. IF WIN CARD GAME YOU GET LIFE POINT OTHERWISE PASS.    
     let thirdChoice=new ThirdChoice(user);
     
-// LAST QUEST: IF YOU GOT THE SWORD, YOU KILL THE BIG BOSS AND GET THE AMULET, OTHERWISE YOU NEED TO SNEAKLY STEAL IT...the end 
+// LAST QUEST: IF YOU GOT THE SWORD, YOU KILL THE BIG BOSS AND GET THE AMULET, OTHERWISE YOU NEED TO SNEAKLY STEAL IT, chance of death...the end 
     let finalQuest=new FinalQuest(user);
     //finalQuest.finalQuest();
 //END
 };
-
+let playOn=true
+while (playOn){
     startAdventure()
-
+    console.log('\nWant to play again? (y/n)')
+    let askPlayAgain=prompt('>').toLowerCase()
+    if (askPlayAgain=='n'||askPlayAgain=='no'){
+        console.log('Ok then! thank you for playing our adventure game!')
+        playOn=false;
+    }
+}
 
 module.exports={startAdventure}
 

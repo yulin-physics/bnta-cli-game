@@ -27,16 +27,9 @@ class Warrior{
         //this.weapon=this.weapon+points
         this.weapon++;
         console.log(`WHAT A SHARP WEAPON!, you have now ${this.weapon} swords`)
-        //this.currentStrength()
         return this.weapon
     }
-    // removeStrength(points){
-    //     let newStrength=this.strength=this.strength-points
-    //     console.log(`experience point removed: ${points}, your strength now is ${newStrength}`)
-    //     if (newStrength<0){
-    //         this.removeLives();
-    //     }
-    //     }
+    
     removeLife(){
         this.lives=this.lives-1;
         return this.lives

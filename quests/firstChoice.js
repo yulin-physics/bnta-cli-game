@@ -15,7 +15,6 @@ ifFirstChoice(user){
                 console.log('\nThat was a good choice!')
                 user.addLife()
                 //console.log(`You now have ${user.currentLives()} lives!`)
-                //need to find pass equivalent or?
             }else{
                 console.log('\nOh no...those berries were poisonous! You feel sick....')
                 user.removeLife()

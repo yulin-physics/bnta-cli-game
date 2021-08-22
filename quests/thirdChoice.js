@@ -1,5 +1,4 @@
 const Warrior = require("./warrior");
-
 const prompt = require("prompt-sync")();
 
 class ThirdChoice{
