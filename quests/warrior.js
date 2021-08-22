@@ -4,6 +4,7 @@ class Warrior{
         this.name=name;
         this.weapon=0;
         this.lives=0;
+        this.playOn=true;
         //this.die=0;
     }
     name(){return this.name}
