@@ -1,6 +1,7 @@
 const Warrior = require("./warrior");
-
+const chalk = require("chalk");
 const prompt = require("prompt-sync")();
+
 class FirstChoice{
     constructor(user){
         this.user= new Warrior();
@@ -8,7 +9,7 @@ class FirstChoice{
     }
 ifFirstChoice(user){
     console.log('\nWhen you enter the forest you see some berries, and you are considering to take them....')
-        console.log('\nDo you take them or not? (y/n)')
+        console.log(chalk.blue.bold('\nDo you take them or not? (y/n)'))
         let choice1=prompt('> ').toLowerCase()
         if (choice1=='yes'||choice1=='y'){
             if ((Math.random()*100+1)>50){
@@ -22,7 +23,7 @@ ifFirstChoice(user){
             }
         }else{
             console.log('\nAfter inspection you convince yourself that those berries are poisonous... ')
-            console.log('so you choose to keep going deeper in the forest...')
+            console.log('\nso you choose to keep going deeper in the forest...')
         }
 }
 }

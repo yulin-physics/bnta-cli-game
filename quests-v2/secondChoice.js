@@ -1,5 +1,6 @@
-const Warrior = require("./warrior");
 const prompt = require("prompt-sync")();
+const chalk = require("chalk");
+const Warrior = require("./warrior");
 const UserVsMonster=require("./userVSMonster.js")
 
 class SecondChoice{
@@ -9,12 +10,12 @@ class SecondChoice{
     }
 ifSecondChoice(user){
     console.log('\nAfter walking for a while, you see nearby an injured fox...poor baby!')
-        console.log('Is helping the poor fox worth your time? (y/n)')
+        console.log(chalk.blue.bold(`\nIs helping the poor fox worth your time? (y/n)`))
         let choice2=prompt('> ').toLowerCase()
         if (choice2=='yes'||choice2=='y'){
             // fox is a monster and attacks!!!
-            console.log(`You are so naive... that was a trap!!! The fox quickly transforms into a not so good looking monster!!!`)
-        if(user.currentLives()>=0){let fight=new UserVsMonster(user)}else{console.log('\n You are feeling so sick that cannot stop vomiting, the monster is disgusted and leaves you be.')}   
+            console.log(`\nYou are so naive... that was a trap!!! The fox quickly transforms into a not so good looking monster!!!`)
+        if(user.currentLives()>=0){let fight=new UserVsMonster(user)}else{console.log('\nYou are feeling so sick that cannot stop vomiting, the monster is disgusted and leaves you be.')}   
         // put class for encounter with monster
         
         
