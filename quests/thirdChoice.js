@@ -1,12 +1,14 @@
 const Warrior = require("./warrior");
+
 const prompt = require("prompt-sync")();
 
 class ThirdChoice{
     constructor(user){
         this.user= new Warrior();
-        this.ifThirdChoice()
+        this.ifThirdChoice(user)
+      
     }
-ifThirdChoice(){
+ifThirdChoice(user){
     
     console.log('\nAfter walking the whole day you find a village....You are tired and would like to find a place where to rest for the night...')
         console.log('\nDo you go to the village to rest? (y/n)')
@@ -19,11 +21,12 @@ ifThirdChoice(){
             let cardGame=prompt('>').toLowerCase()
             if (cardGame=='yes'||cardGame=='y'){
                 //need to add CLASS MINI GAME
-                console.log(`\n'Finally! Someone to play with!' He says!`)
-                console.log('You have a lot of fun and make a new friend...')
-                console.log(`\n'Thank you for playing with me! I have been feeling lonely lately! Actually... I want to thank you with a gift...`)
-                console.log('\nYOU RECEIVED A SWORD!')
-                this.user.addStrength()
+                console.log(`\n'Finally! Someone to play with!' He says!`);
+                console.log('You have a lot of fun and make a new friend...');
+                console.log(`\n'Thank you for playing with me! I have been feeling lonely lately! Actually... I want to thank you with a gift...`);
+                console.log('\nYOU RECEIVED A SWORD!');
+                user.addStrength();
+                console.log(user.currentStrength())
             }else if(cardGame=='no'||cardGame=='n'){
                 console.log(`\n"Oh well, hopefully I will find someone else to play with! have a good evening!" He says, while leaving your table.`)
             }else{

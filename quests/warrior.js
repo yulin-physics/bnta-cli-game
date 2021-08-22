@@ -25,8 +25,9 @@ class Warrior{
     }
     addStrength(){
         //this.weapon=this.weapon+points
-        this.weapon=this.weapon+1;
-        console.log(`WHAT A SHARP WEAPON!`)
+        this.weapon++;
+        console.log(`WHAT A SHARP WEAPON!, you have now ${this.weapon} swords`)
+        //this.currentStrength()
         return this.weapon
     }
     // removeStrength(points){
