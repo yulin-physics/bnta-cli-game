@@ -29,6 +29,7 @@
                     }else{
                         console.log('Oops your attack was too weak and the monster attacks back!')
                         user.youDie()
+                        user.playOn = false
                     }
                 // IF USER WAIT FOR THE MONSTER TO ATTACK, THEY HAVE HIGHER CHANCE TO SURVIVE (70%) 
                 }else if(attackFirst=='no'||attackFirst=='n'){
@@ -37,11 +38,14 @@
                         console.log('The monster tries to hit you but it misses you and you counter-attack!')
                         console.log('In complete disbelief you realise you have killed a monster all by yourself!')
                         console.log('You now need to keep walking, just in case the monster had friends...')
-                    }else{user.youDie()}
+                    }else{user.youDie()
+                        user.playOn = false
+                    }
                 }
                 else{
                     console.log('Your stuttering irritates the monster so much that he kills you!')
                     user.youDie()
+                    user.playOn = false
                 } 
                 }
                 //IF USER STUTTER USER GETS KILLED

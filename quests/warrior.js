@@ -44,6 +44,7 @@ class Warrior{
     } 
     youDie(){
         console.log('YOU DIED')
+        return true
         }
     }   
     
