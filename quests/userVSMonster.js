@@ -1,11 +1,11 @@
-    //const Warrior = require("./warrior");
+    const Warrior = require("./warrior");
     const Monster=require("./monster")
     const prompt = require("prompt-sync")();
 
 
     class UserVsMonster{
         constructor(user){
-            //this.user= new Warrior();
+            this.user= new Warrior();
             this.monster=new Monster();
             this.fightOrFly(user)
         }
