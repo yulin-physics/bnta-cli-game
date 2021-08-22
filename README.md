@@ -10,9 +10,9 @@ Copyright (c) 2021 Bright Network, Inc. All rights reserved. <br />
 You are standing in the middle of a dimly lit forest <br />
 10 feet above the ground nested among some large branches... <br />
 
-▒█▀▀█ █▀▀█ 　 ▀▀█▀▀ █▀▀ █▀▀█ █▀▄▀█ █
-▒█░▄▄ █░░█ 　 ░▒█░░ █▀▀ █▄▄█ █░▀░█ ▀
-▒█▄▄█ ▀▀▀▀ 　 ░▒█░░ ▀▀▀ ▀░░▀ ▀░░░▀ ▄
+▒█▀▀█ █▀▀█ 　 ▀▀█▀▀ █▀▀ █▀▀█ █▀▄▀█ █ <br />
+▒█░▄▄ █░░█ 　 ░▒█░░ █▀▀ █▄▄█ █░▀░█ ▀ <br />
+▒█▄▄█ ▀▀▀▀ 　 ░▒█░░ ▀▀▀ ▀░░▀ ▀░░░▀ ▄ <br />
 
 ## General info
 
@@ -29,7 +29,7 @@ Project is created with:
 
 ## Setup
 
-To run this project,
+To run this project, go in either quests-v1 (version 1) or quests-v2 (version 2) folder,
 
 ```
 $ node main.js
