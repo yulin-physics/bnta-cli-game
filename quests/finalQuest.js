@@ -33,7 +33,7 @@ class FinalQuest{
                 console.log('THE END')
             }else{
                 console.log('You try hard not to make a sound but then a bird starts singing, waking the monster up. The monster sees you and immediately attacks you!')
-                this.user.youDie()
+                user.youDie()
             }
         }    
     }
