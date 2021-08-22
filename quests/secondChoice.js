@@ -14,9 +14,9 @@ ifSecondChoice(user){
         if (choice2=='yes'||choice2=='y'){
             // fox is a monster and attacks!!!
             console.log(`You are so naive... that was a trap!!! The fox quickly transforms into a not so good looking monster!!!`)
-           
+        if(user.currentLives()>=0){let fight=new UserVsMonster(user)}else{console.log('\n You are feeling so sick for the poisonous that cannot stop vomiting, the monster is disgusted and leaves you be.')}   
         // put class for encounter with monster
-        let fight=new UserVsMonster(user)
+        
         
         }else if (choice2=='no'||choice2=='n'){
                 console.log("\nDamn! aren't you just a psychopath? Oh well you do you...")
@@ -24,7 +24,7 @@ ifSecondChoice(user){
             }else{
             console.log('What? you are not even capable to say yes or no... ')
             console.log('you should not attempt helping another creature: you would surely kill it!')
-            console.log('\nso I choose for you to keep going deeper in the forest...')
+            console.log('I thus choose for you to keep going deeper in the forest...')
         }
 }
 }

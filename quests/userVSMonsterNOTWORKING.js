@@ -25,12 +25,12 @@ class UserVsMonster{
                         console.log('\n You attack and throw a punch at it!')
                         let userAttack=user.attack()
                         let monsterTakesAttack=this.monster.takeDamage(userAttack)
-                        if (monsterTakesAttack=0){break}
+                        if (monsterTakesAttack==0){break}
                         
                         let stillWantToFightOrNot=prompt('>').toLowerCase()
                         if(stillWantToFightOrNot=='fight'|| stillWantToFightOrNot=='f'){
                             console.log('\nYou chose to keep fighting.')
-                            if (monsterTakesAttack=0){break}
+                            if (monsterTakesAttack==0){break}
                         }else{
                             console.log("The monster got distracted and you took the chance to run!")
                             break
@@ -41,11 +41,13 @@ class UserVsMonster{
                         let stillWantToFightOrNot=prompt('>').toLowerCase()
                         if(stillWantToFightOrNot=='fight'|| stillWantToFightOrNot=='f'){
                             console.log('\nYou chose to keep fighting.')
-                            if (monsterTakesAttack=0){break}
+                            if (monsterTakesAttack==0){break}
                         }else if(stillWantToFightOrNot=='run'|| stillWantToFightOrNot=='r'){
                             console.log("The monster got distracted and you took the chance to run!")
                             break
-                        }
+                        }else{console.log("The monster pitied your stutter and let you go!")
+                        break}
+                        
                         
                         
                     }

@@ -1,5 +1,6 @@
 const Warrior = require("./warrior");
 const Monster=require("./monster")
+//const PlayAgain=require("./wannaplayagain")
 const prompt = require("prompt-sync")();
 
 
@@ -7,57 +8,50 @@ class UserVsMonster{
     constructor(user){
         this.user= new Warrior();
         this.monster=new Monster();
+        //this.gameon=new PlayAgain();
         this.fightOrFly(user)
     }
     fightOrFly(user){
         console.log('\nOh boy! The monster looks strong! Shall you bravely try to fight it or cowardly run for your life? (fight/run)')
         let braveOrCoward=prompt('>').toLowerCase()
         
-//NEED TO FIND A WAY TO MAKE IT LOOP...UNTIL THE USER SAYS HE WANTS TO RUN AWAY FROM FIGTH
+
 
         if (braveOrCoward=='fight'||braveOrCoward=='f'){
             console.log('\nYou bravely (or stupidly, we will see how you do) chose to fight the monster!')
-            //let fightIsStillGoing=true;
-            while(true){
-                    //  implement needed classes and methods for attacks!
-                    
-                    if (Math.floor(Math.random()*100 + 1)>50){
-                        console.log('\n You attack and throw a punch at it!')
-                        let userAttack=user.attack()
-                        let monsterTakesAttack=this.monster.takeDamage(userAttack)
-                        if (monsterTakesAttack=0){break}
-                        
-                        let stillWantToFightOrNot=prompt('>').toLowerCase()
-                        if(stillWantToFightOrNot=='fight'|| stillWantToFightOrNot=='f'){
-                            console.log('\nYou chose to keep fighting.')
-                            if (monsterTakesAttack=0){break}
-                        }else{
-                            console.log("The monster got distracted and you took the chance to run!")
-                            break
-                        }
-                    }else{
-                        this.monster.monsterAttack(user)
-                        console.log('\nYou have the chance to run away, Do you take it or do you keep fighting (fight/run)')
-                        let stillWantToFightOrNot=prompt('>').toLowerCase()
-                        if(stillWantToFightOrNot=='fight'|| stillWantToFightOrNot=='f'){
-                            console.log('\nYou chose to keep fighting.')
-                            if (monsterTakesAttack=0){break}
-                        }else if(stillWantToFightOrNot=='run'|| stillWantToFightOrNot=='r'){
-                            console.log("The monster got distracted and you took the chance to run!")
-                            break
-                        }else{console.log("The monster pitied your stutter and let you go!")
-                        break}
-                        
-                        
-                        
-                    }
-                
+            console.log('Do you want to attack first? (y/n)')
+            let attackFirst=prompt('>').toLowerCase()
+            // IF USER ATTACK FIRST THEY HAVE LOWER CHANCE OF SURVIVING (40%)
+            if(attackFirst=='yes'||attackFirst=='y'){
+                let userGoFirst=user.attack()
+                if(userGoFirst>=60){
+                    console.log('YOU DESTROYED THE MONSTER!!!')
+                    console.log('In complete disbelief you realise you have killed a monster all by yourself!')
+                    console.log('You now need to keep walking, just in case the monster had friends...')
+                }else{
+                    console.log('Oops your attack was too weak and the monster attacks back!')
+                    this.user.youDie()
                 }
+             // IF USER WAIT FOR THE MONSTER TO ATTACK, THEY HAVE HICHER CHANCE TO SURVIVE (70%) 
+            }else if(attackFirst=='no'||attackFirst=='n'){
+               let monsterGoFirst=Math.floor(Math.random()*100 + 1)
+               if(monsterGoFirst<70){
+                    console.log('The monster tries to hit you but it misses you and you counter-attack!')
+                    console.log('In complete disbelief you realise you have killed a monster all by yourself!')
+                    console.log('You now need to keep walking, just in case the monster had friends...')
+                   }else{this.user.youDie()}
+               }
+               else{
+                console.log('Your stuttering irritates themonster so much that he kills you!')
+                user.youDie()
+            } 
             }
-
+            //IF USER STUTTER USER GETS KILLED
+           
+        
 
 // Choose to run away, continue game
-        if(braveOrCoward=='run'||braveOrCoward=='r'){
+        else if(braveOrCoward=='run'||braveOrCoward=='r'){
             console.log('\nWell, not everyone is born to be a hero.')
             console.log('Surely you must have other qualities...right?')
             console.log('Luckily enough you escaped certain(?) death and the monster decided not to waste its time with you.')

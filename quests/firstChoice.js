@@ -11,7 +11,7 @@ ifFirstChoice(user){
         console.log('\nDo you take them or not? (y/n)')
         let choice1=prompt('> ').toLowerCase()
         if (choice1=='yes'||choice1=='y'){
-            if ((Math.random()*100+1)>20){
+            if ((Math.random()*100+1)>90){
                 console.log('\nThat was a good choice!')
                 user.addLife()
                 console.log(`You now have ${user.currentLives()} lives!`)

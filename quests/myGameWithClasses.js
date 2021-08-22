@@ -9,10 +9,7 @@ const SecondChoice = require("./secondChoice");
 
 
 function startAdventure(){
-//setting choice1 to be 0, so that i can overwrite it with a string later on      
-let choice1=0;
-let choice2=0;
-    
+
     let user=new Warrior();
 
     function saveName(){
@@ -20,7 +17,7 @@ let choice2=0;
         let takeName=prompt('What is your name? ')  
         
         user.assignName(takeName);
-        console.log(`\nSo, ${user.name}, you are telling me that your capricious master ordered you to find the legendary dark amulet...  `)
+        console.log(`\nSo, ${user.name}, you are telling me that your capricious master ordered you to find and kill the legendary dark amulet...  `)
         console.log('\nWell, you will need first to go through this forest, but be careful, as you could encounter monsters...GOOD LUCK')
     }
        
@@ -29,9 +26,10 @@ let choice2=0;
     let choiceBerries= new FirstChoice(user);
 // HERE SECOND CHOICE: HELP INJURED FOX OR NOT, IF YES, MONSTER, OTHERWISE CONTINUE    
     let secondChoice=new SecondChoice(user);
-    
+    console.log('YOU STILL ALIVE!')
 };
 
 startAdventure()
 
+module.exports={startAdventure}
 
