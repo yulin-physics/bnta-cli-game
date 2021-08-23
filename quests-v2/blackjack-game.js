@@ -22,7 +22,7 @@ let usersGame = new BlackJack();
         } else {
             console.log(chalk.underline.magentaBright(`\nYour final score is ${usersGame.getScore()}`));
             //Have dealer play game to try and beat score
-            console.log('\nThe villain will now try and beat your score!');
+            console.log('\nThe dealer will now try and beat your score!');
 
               //Press Enter to contiune.
               console.log(`\n                                                                                                             
@@ -33,7 +33,7 @@ let usersGame = new BlackJack();
                   ████          ████                                  
                     ████  ██  ████                                    
                       ████  ████  
-       Press ENTER to reveal the villain's score!                                  
+       Press ENTER to reveal the dealer's score!                                  
                       ████  ████                                      
                     ████      ████                                    
                   ████    ██    ████                                  
@@ -47,10 +47,10 @@ let usersGame = new BlackJack();
   
 
             let dealersGame = new BlackJack();
-            console.log(chalk.underline.magentaBright(`\nVillain's inital score is ${dealersGame.getScore()}`))
+            console.log(chalk.underline.magentaBright(`\nDealer's inital score is ${dealersGame.getScore()}`))
             while(dealersGame.getScore() <= usersGame.getScore() && !dealersGame.isBust()){
                 dealersGame.twist()
-                console.log(chalk.underline.magentaBright(`\nVillain's new score is ${dealersGame.getScore()}`))
+                console.log(chalk.underline.magentaBright(`\nDealer's new score is ${dealersGame.getScore()}`))
             }
 
             console.log(`\n 
@@ -61,7 +61,7 @@ let usersGame = new BlackJack();
                 ████          ████                                  
                   ████  ██  ████                                    
                     ████  ████  
-        Press ENTER to reveal your fate!                                   
+            Press ENTER to reveal score!                                   
                     ████  ████                                      
                   ████      ████                                    
                 ████    ██    ████                                  
@@ -74,9 +74,9 @@ let usersGame = new BlackJack();
             let finalScore = prompt();
 
             if(!dealersGame.isBust()){
-                console.log(chalk.red.bold(`\nSorry, the villain beat you :( Try again to let yourself free!`));
+                console.log(chalk.red.bold(`\nAh ahhhh!! I knew I was lucky! You will win next time maybe...`));
             } else {
-                console.log(chalk.green.bold(`\nYaaay, you've won securing yourself max protection and freeedom from all evils!`));
+                console.log(chalk.green.bold(`\nWow! finally someone as good as me!!! You won against the king of BlackJack!!!`));
             }
         }
 
