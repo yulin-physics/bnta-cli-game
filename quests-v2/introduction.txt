@@ -21,14 +21,10 @@
 ──██─██──────▀█▀▄▄▄▄▄▄▄▄▄▀▀▓▓▓█
 ──████────────█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█
 
-Go Team! The Greatest Adventure Game of All Times
+The Greatest Adventure Game of All Times
 Copyright (c) 2021 Bright Network, Inc. All rights reserved.
-
-You are in the middle of a dimly lit forest 
-10 feet above the ground nested among some large branches
-
-To move around, follow the instructions!
 
 ▒█▀▀█ █▀▀█ 　 ▀▀█▀▀ █▀▀ █▀▀█ █▀▄▀█ █ 
 ▒█░▄▄ █░░█ 　 ░▒█░░ █▀▀ █▄▄█ █░▀░█ ▀ 
 ▒█▄▄█ ▀▀▀▀ 　 ░▒█░░ ▀▀▀ ▀░░▀ ▀░░░▀ ▄
+© 2021 GitHub, Inc.
