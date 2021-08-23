@@ -13,13 +13,13 @@
         fightOrFly(user){
             console.log('\nOh boy! The monster looks strong!')
             console.log(chalk.blue.bold('\nShall you bravely try to FIGHT it or cowardly RUN for your life? (f/r)'))
-            let braveOrCoward=prompt('>').toLowerCase()
+            let braveOrCoward=prompt('> ').toLowerCase()
             
 
             if (braveOrCoward=='fight'||braveOrCoward=='f'){
                 console.log('\nYou bravely (or stupidly, we will see how you do) chose to fight the monster!')
                 console.log(chalk.blue.bold('\nDo you want to attack first? (y/n)'))
-                let attackFirst=prompt('>').toLowerCase()
+                let attackFirst=prompt('> ').toLowerCase()
                 // IF USER ATTACK FIRST THEY HAVE LOWER CHANCE OF SURVIVING (40%)
                 if(attackFirst=='yes'||attackFirst=='y'){
                     let userGoFirst=user.attack()

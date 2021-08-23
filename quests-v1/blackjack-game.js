@@ -22,16 +22,16 @@ function stickOrTwist(){
         if(answer.toLowerCase() === 'twist' || answer.toLowerCase() === 't'){
             usersGame.twist(); 
             if(usersGame.isBust()){
-                console.log(chalk.bgRed.bold(`\n Your final score is ${usersGame.getScore()}` + `\n Sorry, you've lost. You will stay prisoner forever!`));
+                console.log(chalk.bgRed.bold(`\nSorry, you BUSTED! ` + `Your final score is ${usersGame.getScore()}`));
             } else {
-                console.log(chalk.underline.magentaBright(`\n Your new score is ${usersGame.getScore()}`));
+                console.log(chalk.underline.magentaBright(`\nYour new score is ${usersGame.getScore()}`));
                 //Prompt user to stick or twist again
                 stickOrTwist();
             }
         } else {
-            console.log(chalk.magenta.bold.italic(`\n Your FINAL SCORE is ${usersGame.getScore()}`));
+            console.log(chalk.magenta.bold.italic(`\nYour FINAL SCORE is ${usersGame.getScore()}`));
             //Have dealer play game to try and beat score
-            console.log(chalk.bgRed.bold('\n The villain will now try and beat your score!'));
+            console.log(chalk.bgRed.bold('\nThe dealer now will try to beat your score!'));
 
             //Press Enter to contiune.
             console.log(`\n                                                                                                             
@@ -55,10 +55,10 @@ function stickOrTwist(){
             let gameContinue = prompt();
 
             let dealersGame = new BlackJack();
-            console.log(chalk.bgWhite.bold.red(`\n Villain's inital score is ${dealersGame.getScore()}`));
-            while(dealersGame.getScore() < usersGame.getScore() && !dealersGame.isBust()){
+            console.log(chalk.bgWhite.bold.red(`\nDealer's inital score is ${dealersGame.getScore()}`));
+            while(dealersGame.getScore() < 17 && !dealersGame.isBust()){
                 dealersGame.twist()
-                console.log(chalk.bgWhite.red.bold(`\n Villain's new score is ${dealersGame.getScore()}`));
+                console.log(chalk.bgWhite.red.bold(`\nDealer's new score is ${dealersGame.getScore()}`));
             } //Click enter to view who has won?!
 
             console.log(`\n 
@@ -82,10 +82,12 @@ function stickOrTwist(){
             let finalScore = prompt();
 
             if(!dealersGame.isBust()){
-                console.log(chalk.bgRed(`\n SORRY, THE VILLAIN BEAT YOU :( TRY AGAIN TO LET YOURSELF FREE!`));
+                console.log(chalk.bgRed(`\nAh ahhhh!! I knew I was lucky! You will win next time maybe...`));
             } else {
-                console.log(chalk.green.bold(`\n YAAYY, YOU'VE WON SECURING YOURSELF MAX PROTECTION AND FREEDOM FROM ALL EVILS!`));
+                console.log(chalk.green.bold(`\nWow! finally someone as good as me!!! You won against the king of BlackJack!!!`));
             }
+
+           
         }
 } 
 

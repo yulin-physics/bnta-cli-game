@@ -21,7 +21,7 @@ function startAdventure(){
 
     function saveName(){
         console.log('\nWhat is your name? ');
-        let takeName=prompt(">");  
+        let takeName=prompt("> ");  
         
         user.assignName(takeName);
 
@@ -45,7 +45,7 @@ function startAdventure(){
     // THIRD CHOICE: VILLAGE OR NOT? IF GO TO VILLAGE THEN can play MINIGAME OF CARDS, OTHERWISE CONTINUE. IF WIN CARD GAME YOU GET LIFE POINT OTHERWISE PASS.    
     if (!user.playOn){
         console.log(chalk.bgBlue('\nWant to play again? (y/n)'))
-        let askPlayAgain=prompt('>').toLowerCase()
+        let askPlayAgain=prompt('> ').toLowerCase()
         if (askPlayAgain=='n'||askPlayAgain=='no'){
             console.log(chalk.bgBlue('Ok then! thank you for playing our adventure game!'))
             process.exit();}
@@ -66,7 +66,7 @@ let playOn=true;
 while (playOn){
     startAdventure()
     console.log(chalk.bgBlue('\nWant to play again? (y/n)'))
-    let askPlayAgain=prompt('>').toLowerCase()
+    let askPlayAgain=prompt('> ').toLowerCase()
     if (askPlayAgain=='n'||askPlayAgain=='no'){
         console.log(chalk.bgBlue('Ok then! thank you for playing our adventure game!'))
         playOn=false;

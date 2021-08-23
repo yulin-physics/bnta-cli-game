@@ -20,7 +20,7 @@ ifThirdChoice(user){
             console.log('\nAnother traveller sees you and approaches you while holding some cards... ')
             console.log(`\n"Do you want to play a card game with me? I have been asking everyone in the inn tonight but no one wanted to play!" The traveller said`)
             console.log(chalk.blue.bold('\nDo you want to play? (y/n)'))
-            let cardGame=prompt('>').toLowerCase()
+            let cardGame=prompt('> ').toLowerCase()
             if (cardGame=='yes'||cardGame=='y'){
                 
                 console.log(`\n'Finally! Someone to play with!' He says!`);
@@ -35,8 +35,8 @@ ifThirdChoice(user){
                 prompt(chalk.bgBlue("Ready to start? (Press ENTER)"))
                 StartGame.stickOrTwist();
 
-                console.log(chalk.bgBlue( "So... want to start another round? (y/n)"))
-                let answer = prompt(">")
+                console.log(chalk.bgBlue( `\nSo... want to start another round? (y/n)`))
+                let answer = prompt("> ")
                 if (answer === "y" || answer === "yes"){
                     StartGame.stickOrTwist();
                 }

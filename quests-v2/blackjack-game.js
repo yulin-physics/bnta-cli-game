@@ -9,7 +9,7 @@ let usersGame = new BlackJack();
 
     // console.log(`Your starting score is ${usersGame.getScore()}. Lets see what you got!`);
     console.log(chalk.blue.bold(`\nDo you want to STICK or TWIST? (s/t)`));
-    let answer = prompt(" > ");
+    let answer = prompt("> ");
         if(answer === 'twist' || answer === "t"){
             usersGame.twist(); 
             if(usersGame.isBust()){
