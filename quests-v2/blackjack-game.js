@@ -13,7 +13,7 @@ let usersGame = new BlackJack();
         if(answer === 'twist' || answer === "t"){
             usersGame.twist(); 
             if(usersGame.isBust()){
-                console.log(chalk.underline.magentaBright(`\nSorry, you've lost. You will stay prisoner forever ` + `Your final score is ${usersGame.getScore()}`));
+                console.log(chalk.underline.magentaBright(`\nSorry, you BUSTED! ` + `Your final score is ${usersGame.getScore()} ` + `Your final score is ${usersGame.getScore()}`));
             } else {
                 console.log(chalk.underline.magentaBright(`\nYour new score is ${usersGame.getScore()}`));
                 //Prompt user to stick or twist again
