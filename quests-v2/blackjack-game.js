@@ -3,11 +3,8 @@ const chalk = require('chalk');
 let BlackJack = require('./blackjack.js');
 let usersGame = new BlackJack();
 
-class StickOrTwist{
-    constructor(){
-        this.stickOrTwist()
-    }
- stickOrTwist(){
+
+ function stickOrTwist(){
     // console.log("Welcome to the villain's casino! Win a game of BlackJack to let your family and yourself free!");
 
     // console.log(`Your starting score is ${usersGame.getScore()}. Lets see what you got!`);
@@ -82,9 +79,10 @@ class StickOrTwist{
                 console.log(chalk.green.bold(`\nYaaay, you've won securing yourself max protection and freeedom from all evils!`));
             }
         }
-} 
 
-}
+        //reset playersScore
+        usersGame.playersScore = 0;
+      }
 
 
-module.exports = StickOrTwist;
+module.exports = {stickOrTwist};
